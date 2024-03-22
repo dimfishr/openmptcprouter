@@ -88,6 +88,8 @@ elif [ "$OMR_TARGET" = "rutx50" ]; then
 	OMR_REAL_TARGET="arm_cortex-a7_neon-vfpv4"
 elif [ "$OMR_TARGET" = "bpi-r64" ]; then
 	OMR_REAL_TARGET="aarch64_cortex-a53"
+elif [ "$OMR_TARGET" = "asus_rt-ax59u" ]; then
+	OMR_REAL_TARGET="aarch64_cortex-a53"
 elif [ "$OMR_TARGET" = "espressobin" ]; then
 	OMR_REAL_TARGET="aarch64_cortex-a53"
 elif [ "$OMR_TARGET" = "z8102ax_128m" ] || [ "$OMR_TARGET" = "z8102ax_648m" ]; then
