@@ -105,6 +105,16 @@ define Build/cetron-header
 	rm $@.tmp
 endef
 
+define Device/asus_rt-ax59u
+  DEVICE_VENDOR := ASUS
+  DEVICE_MODEL := RT-AX59U
+  DEVICE_DTS := mt7986a-asus-rt-ax59u
+  DEVICE_DTS_DIR := ../dts
+  DEVICE_PACKAGES := kmod-usb3 kmod-mt7986-firmware mt7986-wo-firmware
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += asus_rt-ax59u
+
 define Device/asus_tuf-ax4200
   DEVICE_VENDOR := ASUS
   DEVICE_MODEL := TUF-AX4200
