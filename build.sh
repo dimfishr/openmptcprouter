@@ -132,8 +132,8 @@ elif [ "$OMR_OPENWRT" = "coolsnowwolf" ]; then
 	_get_repo feeds/${OMR_KERNEL}/luci https://github.com/coolsnowwolf/luci "master"
 elif [ "$OMR_OPENWRT" = "master" ]; then
 	_get_repo "$OMR_TARGET/${OMR_KERNEL}/source" https://github.com/openwrt/openwrt "main"
-	_get_repo feeds/${OMR_KERNEL}/packages https://github.com/openwrt/packages "main"
-	_get_repo feeds/${OMR_KERNEL}/luci https://github.com/openwrt/luci "main"
+	_get_repo feeds/${OMR_KERNEL}/packages https://github.com/openwrt/packages "master"
+	_get_repo feeds/${OMR_KERNEL}/luci https://github.com/openwrt/luci "master"
 else
 	_get_repo "$OMR_TARGET/${OMR_KERNEL}/source" https://github.com/openwrt/openwrt "${OMR_OPENWRT}"
 	_get_repo feeds/${OMR_KERNEL}/packages https://github.com/openwrt/packages "${OMR_OPENWRT}"
