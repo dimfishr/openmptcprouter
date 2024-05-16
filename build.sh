@@ -907,12 +907,13 @@ fi
 [ -d ${OMR_FEED}/iproute2 ] && rm -rf feeds/${OMR_KERNEL}/packages/network/utils/iproute2
 ([ "$OMR_KERNEL" = "6.6" ] || [ "$OMR_KERNEL" = "6.10" ]) && [ -d ${OMR_FEED}/xtables-addons ] && rm -rf feeds/${OMR_KERNEL}/packages/net/xtables-addons
 
-echo "Add Occitan translation support"
-cd feeds/${OMR_KERNEL}
-if ! patch -Rf -N -p1 -s --dry-run < ../../patches/luci-occitan.patch; then
-	patch -N -p1 -s < ../../patches/luci-occitan.patch
+cd feeds/${OMR_KERNEL}                
+
+#echo "Add Occitan translation support"
+#if ! patch -Rf -N -p1 -s --dry-run < ../../patches/luci-occitan.patch; then
+#	patch -N -p1 -s < ../../patches/luci-occitan.patch
 	#sh feeds/luci/build/i18n-add-language.sh oc
-fi
+#fi
 if [ "$OMR_KERNEL" = "5.4" ] && ! patch -Rf -N -p1 -s --dry-run < ../../patches/luci-base-add_array_sort_utilities.patch; then
 	patch -N -p1 -s < ../../patches/luci-base-add_array_sort_utilities.patch
 fi
